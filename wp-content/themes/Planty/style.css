@@ -1,5 +1,5 @@
 /*
-Theme Name: OceanWP Child Theme
+Theme Name: Planty 
 Theme URI: https://oceanwp.org/
 Description: OceanWP WordPress theme. Sample child theme.
 Author: OceanWP
@@ -10,12 +10,441 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
+#site-logo #site-logo-inner a img {
+    max-width: 200px; 
+    height: auto; 
+}
 
+
+#menu-item-621{
+    background-color: #DC9F96 !important;
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+
+
+.main-menu {
+    display: flex;
+    
+}
+#menu-item-623 {
+    order: 1; /* Position this item on the left */
+}
+#menu-item-622 {
+    order: 2; /* Position this item in the middle */
+}
+
+#menu-item-621 {
+    order: 3; /* Position this item on the right */
+}
+
+
+  
+/*** remove page header **/
+.page-header {
+    display: none;
+}
+
+.canette{
+    background-image: url('http://localhost/Planty/wp-content/uploads/2024/07/Group-4-1.png'),
+    url('http://localhost/Planty/wp-content/uploads/2024/07/Group-3-1.png');
+    background-position: 40% 66%, 63% 66%;
+    background-repeat: no-repeat;
+    background-size: 20%;
+       
+}
+
+.equipe.elementor-element-3d6ea6b {
+    background-position: 95% 80% !important; 
+}
+
+
+
+
+
+.equipe.elementor-widget-image-box .elementor-image-box-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column !important;
+}
+
+.elementor-widget-image-box .elementor-image-box-wrapper {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column !important;
+}
+
+
+/**contact-form**/
+
+.wpforms-container-full textarea {
+    width: 50% !important;
+}
+
+
+
+/* Center the submit button */
+/*.wpforms-submit-container {
+    display: flex;
+    justify-content: center;
+}*/
+
+.envoyer-btn{
+    background-color: #E0B9B4 !important;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    height: 25px;
+}
+
+.envoyer-btn:hover {
+    background-color: #D2776A !important;
+}
+
+
+.gouts{
+    padding-right:10px;
+}
+
+
+/**cards-equipe**/
+
+.elementor-widget-image-box .elementor-image-box-wrapper {
+    text-align: left !important;
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+.elementor-image-box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.wp-caption {
+    position: relative;
+    display: inline-block;
+}
+
+.widget-image-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 5px 10px;
+    /*border-radius: 5px;*/
+    text-align: center;
+}
+
+/***votre commander**/
+
+.fruit-container{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    padding-left: 80px;
+     
+}
+
+.fruit-container a{
+    width:100%;
+}
+
+
+.fruit-item {
+text-align: center; 
+padding: 10px; 
+position: relative; /* Make the parent container relative */
+margin-bottom: 40px;
+
+}
+.image-wrapper {
+position: relative; /* This wrapper will hold the image and the caption */
+}
+
+.image-wrapper img {
+max-width: 100%; 
+height: auto; 
+display: block;
+margin: 0 auto;
+}
+
+.widget-image-caption {
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: transparent;
+color: #fff;
+padding: 5px 10px;
+text-align: center;
+}
+
+.widget-image-caption {
+color: #FFFFFF;
+font-family: "Syne", Sans-serif;
+font-size: 25px;
+font-weight: 800;
+align-content: center;
+line-height: 1;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.order-box{
+    display: flex;
+    align-items: center;  
+    border-radius: 5px; 
+    overflow: hidden; /* Ensure children elements do not overflow the rounded corners */
+   
+}
+
+.quantity-btn {
+    background-color: #E0B9B4;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 25px; 
+}
+
+.separator {
+    width: 150px;
+    border: 1px solid #FFFFFF; 
+    margin:  0;
+}
+
+.quantity-input {
+    width: 45px;
+    text-align: center;
+    margin: 0 ;
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+    height:53px;
+}
+    
+
+
+
+
+/****** form-commander**/
+
+
+.title-commander{
+    color: #ffffff; 
+    font-size: 40px;
+    font-family: Syne;
+    font-weight: 800;
+    text-align: center;
+    
+    
+
+}
+.votre-commande,  .order-title {
+    color: #ffffff; 
+    font-size: 30px; 
+    font-family: Syne;
+}
+
+.separator {
+    width: 800px;
+    border: 1px solid #FFFFFF; 
+    margin:  0;
+}
+.column .order-title{
+    color:#ffffff;
+}
+
+.order-label{
+    font-family: Syne;
+    font-size: 20px;
+}
+.order-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.separator-column {
+    width: 2px;
+    background-color: #ddd;
+    margin: 0 20px;
+    height: auto;
+}
+
+
+
+.order-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #E0B9B4 !important;
+    color: #FFFFFF;
+    cursor: pointer;
+    height:53px;
+    border-radius: 5px;
+    width:150px;
+}
+
+.order-btn:hover {
+    background-color: #D2776A !important;
+}
+
+
+
+
+
+.order-label{
+    color:#FFFFFF;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+background:#FFFFFF;
+color:#FFF;
+font-family:lora, sans-serif; 
+font-style:italic;    
+}
+
+
+/*.wpforms-submit-container button.wpforms-submit:hover {
+    background-color: #DC9F96 !important;
+}*/
+  /* Vertical line styles */
+  .form-commander .wpforms-field-container::before {
+    content: "";
+    width: 1px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+  
+  .elementor-element.elementor-element-8d1b72f {
+    max-width: 100%;
+    margin-left: 60px;
+}
+
+.elementor-element-8d1b72f .wpforms-submit-container button {
+    margin-right: 90px;
+    margin-top: 20px;
+}
+/********* footer*******/
+
+
+
+
+#footer-bottom #footer-bottom-menu a {
+    color: #000000;
+   
+}
 #footer-bottom {
     background-color: #FFFFFF !important;
-    padding: 15px 0;
-    font-size: 12px;
-    line-height: 1;
-    color: #000000 !important;
-    align-self: center;
+    width:100%
+    
 }
+#footer-bottom #footer-bottom-menu {
+    color: #000000;
+    text-align: left;
+    
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+    /**equipe-background img**/
+        .elementor-593 .elementor-element.elementor-element-3d6ea6b:not(.elementor-motion-effects-element-type-background), .elementor-593 .elementor-element.elementor-element-3d6ea6b > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+            /*background-position: 90% 90%;*/
+        }
+        .elementor-593 .elementor-element.elementor-element-b9cc22b:not(.elementor-motion-effects-element-type-background), .elementor-593 .elementor-element.elementor-element-b9cc22b > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+            /*background-position: 9% 7% !important;*/
+        }
+    
+       
+    }
+    
+    @media (max-width: 769px){
+        
+    
+        .canette{
+            background-position: 40% 70%, 65% 70%;
+               
+        }
+        /*contact-form*/
+        #wpforms-submit-941{
+            width:40%;
+            margin-right: 50px;
+        }
+
+    
+        .fruit-container{
+            display: flex;
+            flex-wrap: wrap;
+            width:100%;
+            gap:10px;  
+        }
+    
+        .quantity-controls {
+            margin-top: 20px;
+            justify-content: center;
+        }
+        #footer-bottom #footer-bottom-menu {
+            color: #000000;
+            text-align: center;
+            
+        }
+    
+       
+    }
+    
+    
+    @media (max-width: 600px) {
+        
+    
+        
+        .canette{
+            background-position: 38% 74%, 65% 74%;
+               
+        }
+    }
+  
+
+
+
+
+
+/**nous rencontre background**/
+
+
+  

@@ -14,13 +14,29 @@
 	<?php do_action( 'ocean_before_footer' ); ?>
 
 	<?php
-	// Elementor `footer` location.
-	if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) {
-		?>
+if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) {
+    do_action( 'ocean_footer' );
+    ?>
+    <div id="footer-bottom" class="clr">
+        <div id="footer-bottom-inner" class="container clr">
+            <div id="footer-bottom-menu" class="navigation clr">
+                <?php
+                if ( has_nav_menu( 'footer_menu' ) ) {
+                    wp_nav_menu( array(
+                        'theme_location' => 'footer_menu',
+                        'container'      => 'div',
+                        'container_id'   => 'menu-footer-menu-container',
+                        'menu_class'     => 'menu',
+                    ) );
+                }
+                ?>
+            </div><!-- #footer-bottom-menu -->
+        </div><!-- #footer-bottom-inner -->
+    </div><!-- #footer-bottom -->
+    <?php
+}
+?>
 
-		<?php do_action( 'ocean_footer' ); ?>
-
-	<?php } ?>
 
 	<?php do_action( 'ocean_after_footer' ); ?>
 
@@ -58,7 +74,7 @@ if ( 'sidebar' === oceanwp_mobile_menu_style() ) {
 
 	<?php
 	// Mobile Menu (if defined).
-	get_template_part( 'partials/mobile/mobile-nav' );
+	/*get_template_part( 'partials/mobile/mobile-nav' );*/
 	?>
 
 	<?php
@@ -73,9 +89,9 @@ if ( 'sidebar' === oceanwp_mobile_menu_style() ) {
 
 <?php
 // If full screen mobile menu style.
-if ( 'fullscreen' === oceanwp_mobile_menu_style() ) {
+/*if ( 'fullscreen' === oceanwp_mobile_menu_style() ) {
 	get_template_part( 'partials/mobile/mobile-fullscreen' );
-}
+}*/
 ?>
 
 <?php wp_footer(); ?>
