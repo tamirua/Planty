@@ -46,14 +46,19 @@ add_action('after_setup_theme', 'my_oceanwp_child_theme_setup');
 function add_admin_link_to_menu($items, $args) {
     // Check if the user is logged in
     if (is_user_logged_in()) {
-        // Define the Admin link
-        $admin_link = '<li id="menu-item-622"><a href="' . admin_url() . '">Admin</a></li>';
-        // Append the Admin link to the existing menu items
-        $items .= $admin_link;
+        // Check if the menu location is 'main_menu'
+        if ($args->theme_location == 'main_menu') {
+            // Define the Admin link
+            $admin_link = '<li id="menu-item-622"><a href="' . admin_url() . '">Admin</a></li>';
+            // Append the Admin link to the existing menu items
+            $items .= $admin_link;
+        }
     }
     return $items;
 }
 add_filter('wp_nav_menu_items', 'add_admin_link_to_menu', 10, 2);
+
+
 
 ?>
 
