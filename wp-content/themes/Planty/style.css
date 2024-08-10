@@ -21,7 +21,7 @@ Version: 1.0
     height: auto; 
 }
 
-#menu-item-621{
+#menu-item-621 > a{
     background-color: #DC9F96 !important;
     color: #ffffff !important;
     border-radius: 5px;
@@ -53,8 +53,7 @@ Version: 1.0
     url('http://localhost/Planty/wp-content/uploads/2024/07/Group-3-1.png');
     background-position: 40% 66%, 63% 66%;
     background-repeat: no-repeat;
-    background-size: 20%;
-       
+    background-size: 20%;     
 }
 
 .comment .elementor-image-box-wrapper {
@@ -95,14 +94,12 @@ Version: 1.0
     line-height: 1;
 }
 
-
 /***********Nous rencontrer section*********/
 
 .equipe.elementor-widget-image-box .elementor-image-box-wrapper {
     text-align: center;
     display: flex;
-    flex-direction: column !important;
-    
+    flex-direction: column !important; 
 }
 
 .equipe.elementor-element-3d6ea6b {
@@ -145,14 +142,12 @@ font-size: 20px;
     font-weight: 800;
     text-align: center;
     padding-bottom: 25px;
-
 }
 
 .votre-commande,  .order-title {
     color: #ffffff; 
     font-size: 30px; 
     font-family: Syne;
-    text-align: left;
 }
 
 .separator {
@@ -177,8 +172,6 @@ font-size: 20px;
     background-color: #D2776A !important;
 }
 
-
-
 .fruit-container {
     display: flex;
     justify-content: center;
@@ -200,7 +193,6 @@ font-size: 20px;
     flex: 1;
     min-width: 300px; 
 }
-
 
 form.wpcf7-form {
     display: flex;
@@ -254,8 +246,6 @@ form.wpcf7-form {
 }
 
 
-
-
 @media (max-width: 1024px) {
 
     /*nous rencontrer bg*/
@@ -263,7 +253,6 @@ form.wpcf7-form {
         background-position: 15% 16% !important;
         background-size: 120px ! important;
         }
-   
     }
     
     @media (max-width: 769px){
