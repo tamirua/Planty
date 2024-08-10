@@ -32,6 +32,12 @@ function oceanwp_child_enqueue_parent_style() {
 
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
 
+function oceanwp_child_enqueue_fonts() {
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap', false );
+}
+add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_fonts' );
+
+
 function my_oceanwp_child_theme_setup() {
     register_nav_menus(array(
         'main_menu' => __('Main Menu', 'oceanwp-child'),
@@ -47,7 +53,7 @@ function add_admin_link_to_menu($items, $args) {
     // Check if the user is logged in
     if (is_user_logged_in()) {
         // Check if the menu location is 'main_menu'
-        if ($args->theme_location == 'main_menu') {
+        if ($args->theme_location == 'main_menu'|| $args->theme_location == 'mobile_menu') {
             // Define the Admin link
             $admin_link = '<li id="menu-item-622"><a href="' . admin_url() . '">Admin</a></li>';
             // Append the Admin link to the existing menu items

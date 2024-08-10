@@ -113,6 +113,11 @@ Version: 1.0
 
 /**contact-form**/
 
+
+.wpcf7 form {
+    font-family: Syne;
+}
+
 .wpcf7 input[type="text"],
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
@@ -121,6 +126,7 @@ color:#000000 !important;
 font-family:Syne;
 font-size: 20px;  
 }
+
 
 .envoyer-btn{
     background-color: #E0B9B4 !important;
@@ -204,7 +210,13 @@ form.wpcf7-form {
 .wpcf7-form .wpcf7-submit {
     display: block;
     margin: 0 auto;
+    text-transform: none !important;
 }
+
+input[type=submit]{
+    text-transform: none !important;
+}
+
 
 .separator {
     width: 100%;
